@@ -24,7 +24,7 @@ def num_check(question):
 
 
 # Main Routine
-
+print("*** Square Area / Perimeter ***")
 # Ask user length of square
 length = num_check("What is the length: ")
 
@@ -37,3 +37,5 @@ print("The length is {}".format(length_1))
 
 print("The area of the square is {}".format(area))
 print("The perimeter of the square is {}".format(perimeter))
+
+print("*** Square Area / Perimeter ***")
