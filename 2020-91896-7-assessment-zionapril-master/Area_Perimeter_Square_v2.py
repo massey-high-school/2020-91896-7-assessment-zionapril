@@ -26,14 +26,14 @@ def num_check(question):
 # Main Routine
 print("*** Square Area / Perimeter ***")
 # Ask user length of square
-length = num_check("What is the length: ")
+square_length = num_check("What is the length: ")
 
-length_1 = float(length)
+square_length = float(square_length)
 
-area = length_1 * length_1
-perimeter = length_1 * 4
+area = square_length * square_length
+perimeter = square_length * 4
 
-print("The length is {}".format(length_1))
+print("The length is {}".format(square_length))
 
 print("The area of the square is {}".format(area))
 print("The perimeter of the square is {}".format(perimeter))

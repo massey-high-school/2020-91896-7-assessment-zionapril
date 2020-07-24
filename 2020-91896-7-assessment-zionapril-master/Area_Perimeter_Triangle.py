@@ -26,18 +26,18 @@ def num_check(question):
 # Main Routine goes here
 
 print("*** Triangle Area / Perimeter ***")
-base = num_check("What is the base: ")
-height = num_check("What is slant height 1: ")
-height_2 = num_check("What is slant height 2:")
+triangle_base = num_check("What is the base: ")
+triangle_height = num_check("What is slant height 1: ")
+triangle_height_2 = num_check("What is slant height 2:")
 perpendicular_height = num_check("What is the perpendicular height: ")
 
-base = int(base)
-height = int(height)
-height_2 = int(height_2)
+triangle_base = int(triangle_base)
+triangle_height = int(triangle_height)
+triangle_height_2 = int(triangle_height_2)
 perpendicular_height = int(perpendicular_height)
 
-area = 0.5 * base * perpendicular_height
-perimeter = base + height_2 + height
+area = 0.5 * triangle_base * perpendicular_height
+perimeter = triangle_base + triangle_height_2 + triangle_height
 
 print("The Area of the triangle is {}".format(area))
 print("The perimeter of the triangle is {}".format(perimeter))

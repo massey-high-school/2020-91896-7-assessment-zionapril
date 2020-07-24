@@ -17,7 +17,7 @@ def num_check(question):
                 if float(response) <=0:
                     print(error)
                 else:
-                    return response
+                    return float(response)
 
             except ValueError:
                 print(error)

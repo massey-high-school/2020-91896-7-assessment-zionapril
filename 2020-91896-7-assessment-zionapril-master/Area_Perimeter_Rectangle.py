@@ -27,17 +27,17 @@ def num_check(question):
 print("*** Rectangle Area / Perimeter ***")
 # Ask user for length and width of rectangle
 
-length = num_check("What is the length:")
-width = num_check("What is the width:")
+rectangle_length = num_check("What is the length:")
+rectangle_width = num_check("What is the width:")
 
-length_2 = int(length)
-width_1 = int(width)
+rectangle_length = int(rectangle_length)
+rectangle_width = int(rectangle_width)
 
-area = width_1 * length_2
-perimeter = length_2 + width_1 + length_2 + width_1
+area = rectangle_width * rectangle_length
+perimeter = rectangle_length + rectangle_width + rectangle_length + rectangle_width
 
-print("length:{}".format(length))
-print("width:{}".format(width))
+print("length:{}".format(rectangle_length))
+print("width:{}".format(rectangle_width))
 
 print("The area of the rectangle is {}".format(area))
 print("The perimeter of the rectangle is {}".format(perimeter))
