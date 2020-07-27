@@ -78,10 +78,11 @@ keep_going = ""
 while keep_going == "":
     shape_answer = []
     available_shapes = ["square", "rectangle", "triangle", "parallelogram", "circle", "trapezium"]
-
+    # Asks user to choose what shape they want to work out
     ask_user = string_checker("Choose a shape to work out:", available_shapes)
     print(ask_user)
     summary_1 = []
+
     unit_central = {
     "cm": 1,
     "m": 100,
@@ -183,6 +184,7 @@ while keep_going == "":
         # Works out area and circumference of circle
         area = 3.14 * circle_radius ** 2
         circumference = 2 * 3.14 * circle_radius
+        circumference = int(circumference)
         # Displays area and circumference of circle
         print("The area is {} {}".format(area, unit))
         print("The circumference is {} {}".format(circumference, unit))
@@ -191,11 +193,11 @@ while keep_going == "":
         print(("Rounded off area is {}".format(round(area))))
         print(("Rounded off circumference is {}".format(round(circumference))))
 
-        shape_answer.append(ask_user)
-        shape_answer.append(circle_radius)
-        shape_answer.append(unit)
-        shape_answer.append(area)
-        shape_answer.append(circumference)
+        summary_1.append(ask_user)
+        summary_1.append(circle_radius)
+        summary_1.append(unit)
+        summary_1.append(area)
+        summary_1.append(circumference)
 
         print("*** Circle Area / Circumference Solver ***")
 
@@ -269,7 +271,11 @@ while keep_going == "":
 
     shape_answer.append(summary_1)
 
-# Calculation Summary
+    # gives the option to continue or quit
+
+    keep_going = input("Press enter for another go or any key and then enter to quit")
+
+    # Calculation Summary
 
     if ask_user == "square":
 
