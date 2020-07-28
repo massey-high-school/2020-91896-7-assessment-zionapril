@@ -40,7 +40,8 @@ height = int(height)
 side_1 = int(side_1)
 side_2 = int(side_2)
 
-area = bottom_base + top_base / 2 * height
+#area = bottom_base + top_base / 2 * height
+area = 0.5 * (bottom_base + top_base) * height
 perimeter = bottom_base + top_base + side_1 + side_2
 
 print("The area is {}".format(area))

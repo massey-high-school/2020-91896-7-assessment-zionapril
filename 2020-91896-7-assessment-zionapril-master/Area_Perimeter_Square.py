@@ -54,8 +54,8 @@ def num_check(question):
 # Main Routine
 
 # Ask user length and width of square
-length = input("What is the length: ")
-width = input("What is the width: ")
+length = num_check("What is the length: ")
+width = num_check("What is the width: ")
 
 length_1 = int(length)
 width_1 = int(width)

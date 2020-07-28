@@ -93,7 +93,6 @@ while keep_going == "":
         print("*** Square Area / Perimeter ***")
         # Ask user length of square
         square_length = num_check("What is the length: ")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
         # turns integer to string
         square_length = float(square_length)
@@ -119,7 +118,6 @@ while keep_going == "":
 
         rectangle_length = num_check("What is the length:")
         rectangle_width = num_check("What is the width:")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
         # takes the decimal out and turns it into integer
         rectangle_length = int(rectangle_length)
@@ -149,7 +147,6 @@ while keep_going == "":
         triangle_height = num_check("What is slant height 1: ")
         triangle_height_2 = num_check("What is slant height 2:")
         perpendicular_height = num_check("What is the perpendicular height: ")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
         # turns it into integer
         triangle_base = int(triangle_base)
@@ -177,7 +174,6 @@ while keep_going == "":
         print("*** Circle Area / Circumference Solver ***")
         # Asks user for radius of circle
         circle_radius = num_check("What is the radius:")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
         # Turns string into integer
         circle_radius = int(circle_radius)
@@ -207,7 +203,6 @@ while keep_going == "":
         parallelogram_base = num_check("What is the base: ")
         parallelogram_height = num_check("what is the height:")
         parallelogram_side = num_check("What is the side length:")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
 
         parallelogram_base = int(parallelogram_base)
@@ -238,7 +233,6 @@ while keep_going == "":
         height = num_check("What is the height:")
         side_1 = num_check("What is side 1:")
         side_2 = num_check("What is side 2:")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
 
         bottom_base = int(bottom_base)
