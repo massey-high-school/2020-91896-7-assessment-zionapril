@@ -103,13 +103,20 @@ while keep_going == "":
         # displays length of the square
         print("The length is {} {}".format(square_length, unit))
         # displays area and perimeter of the square
-        print("The area of the square is {} {}".format(area, unit))
+        print("The area of the square is {} {} ".format(area, unit))
         print("The perimeter of the square is {} {}".format(perimeter, unit))
-        shape_name = "shape : {}".format(ask_user)
-        display_dimensions = "{} x {}".format(square_length, square_length)
+
+        shape_name = "Shape : {}".format(ask_user)
+        display_dimensions_1 = " Area: {} {} x {} {}".format(square_length, unit, square_length, unit)
+        display_dimensions_2 = "Perimeter: {} {} x 4".format(square_length, unit)
+        display_area = "Area: {} {}".format(area, unit)
+        display_perimeter = "Perimeter: {} {}".format(perimeter, unit)
 
         summary_1.append(shape_name)
-        summary_1.append(display_dimensions)
+        summary_1.append(display_dimensions_1)
+        summary_1.append(display_dimensions_2)
+        summary_1.append(display_area)
+        summary_1.append(display_perimeter)
 
         print("*** Square Area / Perimeter ***")
 
@@ -132,12 +139,18 @@ while keep_going == "":
         # displays area and perimeter of rectangle
         print("The area of the rectangle is {} {}".format(area, unit))
         print("The perimeter of the rectangle is {} {}".format(perimeter, unit))
-        summary_1.append(ask_user)
-        summary_1.append(rectangle_length)
-        summary_1.append(rectangle_width)
-        summary_1.append(unit)
-        summary_1.append(area)
-        summary_1.append(perimeter)
+
+        shape_name = "Shape: {}".format(ask_user)
+        display_dimensions_1 = " Area: {} {} x {} {}".format(rectangle_width, unit, rectangle_length, unit)
+        display_dimensions_2 = "Perimeter: {} {} + {} {} + {} {} + {} {}".format(rectangle_length, unit, rectangle_width, unit, rectangle_length, unit, rectangle_width, unit)
+        display_area = "Area: {} {}".format(area, unit)
+        display_perimeter = "Perimeter: {} {}".format(perimeter, unit)
+
+        summary_1.append(shape_name)
+        summary_1.append(display_dimensions_1)
+        summary_1.append(display_dimensions_2)
+        summary_1.append(display_area)
+        summary_1.append(display_perimeter)
 
         print("*** Rectangle Area / Perimeter ***")
 
@@ -160,14 +173,19 @@ while keep_going == "":
         # displays area and perimeter of triangle
         print("The Area of the triangle is {} {}".format(area, unit))
         print("The perimeter of the triangle is {} {}".format(perimeter, unit))
-        summary_1.append(ask_user)
-        summary_1.append(triangle_base)
-        summary_1.append(triangle_height)
-        summary_1.append(triangle_height_2)
-        summary_1.append(unit)
-        summary_1.append(perpendicular_height)
-        summary_1.append(area)
-        summary_1.append(perimeter)
+
+        shape_name = "Shape: {}".format(ask_user)
+        display_dimensions_1 = "Area: 0.5 x {} {} x {} {}".format(triangle_base, unit, perpendicular_height, unit)
+        display_dimensions_2 = "Perimeter: {} {} + {} {} + {} {}".format(triangle_base, unit, triangle_height_2, unit,
+                                                                         triangle_height, unit)
+        display_area = "Area: {} {}".format(area, unit)
+        display_perimeter = "Perimeter: {} {}".format(perimeter, unit)
+
+        summary_1.append(shape_name)
+        summary_1.append(display_dimensions_1)
+        summary_1.append(display_dimensions_2)
+        summary_1.append(display_area)
+        summary_1.append(display_perimeter)
 
         print("*** Triangle Area / Perimeter ***")
 
@@ -190,11 +208,17 @@ while keep_going == "":
         print(("Rounded off area is {}".format(round(area))))
         print(("Rounded off circumference is {}".format(round(circumference))))
 
-        summary_1.append(ask_user)
-        summary_1.append(circle_radius)
-        summary_1.append(unit)
-        summary_1.append(area)
-        summary_1.append(circumference)
+        shape_name = "Shape: {}".format(ask_user)
+        display_dimensions_1 = "Area: 3.14 x {} {} ^ 2".format(circle_radius, unit)
+        display_dimensions_2 = "Circumference: 2 x 3.14 x {} {}".format(circle_radius, unit)
+        display_area = "Area: {} {}".format(area, unit)
+        display_perimeter = "Circumference: {} {}".format(circumference, unit)
+
+        summary_1.append(shape_name)
+        summary_1.append(display_dimensions_1)
+        summary_1.append(display_dimensions_2)
+        summary_1.append(display_area)
+        summary_1.append(display_perimeter)
 
         print("*** Circle Area / Circumference Solver ***")
 
@@ -218,13 +242,17 @@ while keep_going == "":
 
         print("*** Parallelogram Area / Perimeter Solver ***")
 
-        summary_1.append(ask_user)
-        summary_1.append(parallelogram_base)
-        summary_1.append(parallelogram_height)
-        summary_1.append(parallelogram_side)
-        summary_1.append(unit)
-        summary_1.append(area)
-        summary_1.append(perimeter)
+        shape_name = "Shape: {}".format(ask_user)
+        display_dimensions_1 = "Area: {} {} x {} {}".format(parallelogram_base, unit, parallelogram_height, unit)
+        display_dimensions_2 = "Perimeter: 2 x ({} {} + {} {})".format(parallelogram_side, unit, parallelogram_base, unit)
+        display_area = "Area: {} {}".format(area, unit)
+        display_perimeter = "Perimeter: {} {}".format(perimeter, unit)
+
+        summary_1.append(shape_name)
+        summary_1.append(display_dimensions_1)
+        summary_1.append(display_dimensions_2)
+        summary_1.append(display_area)
+        summary_1.append(display_perimeter)
 
     if ask_user == "trapezium":
         print("*** Trapezium Area / Perimeter ***")
@@ -250,25 +278,26 @@ while keep_going == "":
 
         print("*** Trapezium Area / Perimeter ***")
 
-        keep_going = input("<enter> or q ")
+        shape_name = "Shape: {}".format(ask_user)
+        display_dimensions_1 = "Area: {} {} + {} {} / 2 x {} {}".format(bottom_base, unit, top_base, unit, height, unit)
+        display_dimensions_2 = "Perimeter: {} {} + {} {} + {} {} + {} {}".format(bottom_base, unit, top_base, unit,
+                                                                                 side_1, unit, side_2, unit)
 
-        keep_going = input("<enter> or q ")
+        display_area = "Area: {} {}".format(area, unit)
+        display_perimeter = "Perimeter: {} {}".format(perimeter, unit)
 
-        summary_1.append(ask_user)
-        summary_1.append(bottom_base)
-        summary_1.append(top_base)
-        summary_1.append(height)
-        summary_1.append(side_1)
-        summary_1.append(side_2)
-        summary_1.append(unit)
-        summary_1.append(area)
-        summary_1.append(perimeter)
-
-    shape_answer.append(summary_1)
+        summary_1.append(shape_name)
+        summary_1.append(display_dimensions_1)
+        summary_1.append(display_dimensions_2)
+        summary_1.append(display_area)
+        summary_1.append(display_perimeter)
 
     # gives the option to continue or quit
 
     keep_going = input("Press enter for another go or any key and then enter to quit")
+
+    shape_answer.append(summary_1)
+
 
 for item in shape_answer:
     print(item)
