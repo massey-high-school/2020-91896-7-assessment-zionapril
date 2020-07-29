@@ -1,0 +1,17 @@
+append...
+- shape
+- dimensions
+- area (with units)
+- perimeter (with units)
+
+for each shape...
+display_dimensions = "{} x {}".format(width, width)  <for square>
+display_area = "n/a" <for triangle where there is no area>
+display_perimeter = "{} {}".format(perimeter, unit) <for ??>
+
+
+at end...
+summary_1.append(display_dimensions)
+<ETC>
+
+Add to big list

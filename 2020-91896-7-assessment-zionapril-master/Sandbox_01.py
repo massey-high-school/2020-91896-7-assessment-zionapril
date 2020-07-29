@@ -73,12 +73,13 @@ def unit_checker():
         return unit_to_check
 
 
+shape_answer = []
 #  *** Main Routine starts here ***
 keep_going = ""
 while keep_going == "":
-    shape_answer = []
-    available_shapes = ["square", "rectangle", "triangle", "parallelogram", "circle", "trapezium"]
 
+    available_shapes = ["square", "rectangle", "triangle", "parallelogram", "circle", "trapezium"]
+    # Asks user to choose what shape they want to work out
     ask_user = string_checker("Choose a shape to work out:", available_shapes)
     print(ask_user)
     summary_1 = []
@@ -93,7 +94,6 @@ while keep_going == "":
         print("*** Square Area / Perimeter ***")
         # Ask user length of square
         square_length = num_check("What is the length: ")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
         # turns integer to string
         square_length = float(square_length)
@@ -105,11 +105,11 @@ while keep_going == "":
         # displays area and perimeter of the square
         print("The area of the square is {} {}".format(area, unit))
         print("The perimeter of the square is {} {}".format(perimeter, unit))
-        summary_1.append(ask_user)
-        summary_1.append(square_length)
-        summary_1.append(unit)
-        summary_1.append(area)
-        summary_1.append(perimeter)
+        shape_name = "shape : {}".format(ask_user)
+        display_dimensions = "{} x {}".format(square_length, square_length)
+
+        summary_1.append(shape_name)
+        summary_1.append(display_dimensions)
 
         print("*** Square Area / Perimeter ***")
 
@@ -119,7 +119,6 @@ while keep_going == "":
 
         rectangle_length = num_check("What is the length:")
         rectangle_width = num_check("What is the width:")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
         # takes the decimal out and turns it into integer
         rectangle_length = int(rectangle_length)
@@ -149,7 +148,6 @@ while keep_going == "":
         triangle_height = num_check("What is slant height 1: ")
         triangle_height_2 = num_check("What is slant height 2:")
         perpendicular_height = num_check("What is the perpendicular height: ")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
         # turns it into integer
         triangle_base = int(triangle_base)
@@ -177,13 +175,13 @@ while keep_going == "":
         print("*** Circle Area / Circumference Solver ***")
         # Asks user for radius of circle
         circle_radius = num_check("What is the radius:")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
         # Turns string into integer
         circle_radius = int(circle_radius)
         # Works out area and circumference of circle
         area = 3.14 * circle_radius ** 2
         circumference = 2 * 3.14 * circle_radius
+        circumference = int(circumference)
         # Displays area and circumference of circle
         print("The area is {} {}".format(area, unit))
         print("The circumference is {} {}".format(circumference, unit))
@@ -192,11 +190,11 @@ while keep_going == "":
         print(("Rounded off area is {}".format(round(area))))
         print(("Rounded off circumference is {}".format(round(circumference))))
 
-        shape_answer.append(ask_user)
-        shape_answer.append(circle_radius)
-        shape_answer.append(unit)
-        shape_answer.append(area)
-        shape_answer.append(circumference)
+        summary_1.append(ask_user)
+        summary_1.append(circle_radius)
+        summary_1.append(unit)
+        summary_1.append(area)
+        summary_1.append(circumference)
 
         print("*** Circle Area / Circumference Solver ***")
 
@@ -206,7 +204,6 @@ while keep_going == "":
         parallelogram_base = num_check("What is the base: ")
         parallelogram_height = num_check("what is the height:")
         parallelogram_side = num_check("What is the side length:")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
 
         parallelogram_base = int(parallelogram_base)
@@ -237,7 +234,6 @@ while keep_going == "":
         height = num_check("What is the height:")
         side_1 = num_check("What is side 1:")
         side_2 = num_check("What is side 2:")
-        print("Available units:CM, M, MM")
         unit = unit_checker()
 
         bottom_base = int(bottom_base)
@@ -270,70 +266,9 @@ while keep_going == "":
 
     shape_answer.append(summary_1)
 
+    # gives the option to continue or quit
+
     keep_going = input("Press enter for another go or any key and then enter to quit")
 
-    # Calculation Summary
-
-    if ask_user == "square":
-
-        for square in shape_answer:
-            print("***Calculation Summary***")
-            print("shape: {}".format(square[0]))
-            print("length: {} {}".format(square[1], square[2]))
-            print("area: {} {} ".format(square[3], square[2]))
-            print("perimeter: {} {}".format(square[4], square[2]))
-
-    if ask_user == "rectangle":
-
-        for rectangle in shape_answer:
-            print("***Calculation Summary***")
-            print("shape: {}".format(rectangle[0]))
-            print("length: {} {}".format(rectangle[1], rectangle[3]))
-            print("width: {} {}".format(rectangle[2], rectangle[3]))
-            print("area: {} {}".format(rectangle[4], rectangle[3]))
-            print("perimeter {} {}".format(rectangle[5], rectangle[3]))
-
-    if ask_user == "triangle":
-
-        for triangle in shape_answer:
-            print("***Calculation Summary***")
-            print("shape: {}".format(triangle[0]))
-            print("base: {} {}".format(triangle[1], triangle[4]))
-            print("height 1: {} {}".format(triangle[2], triangle[4]))
-            print("height 2: {} {}".format(triangle[3], triangle[4]))
-            print("perpendicular height: {} {}".format(triangle[5], triangle[4]))
-            print("area: {} {}".format(triangle[6], triangle[4]))
-            print("perimeter: {} {}".format(triangle[7], triangle[4]))
-
-    if ask_user == "circle":
-
-        for circle in shape_answer:
-            print("***Calculation Summary***")
-            print("shape: {}".format(circle[0]))
-            print("radius: {} {}".format(circle[1], circle[2]))
-            print("area: {} {}".format(circle[3], circle[2]))
-            print("circumference: {} {}".format(circle[4], circle[2]))
-
-    if ask_user == "parallelogram":
-
-        for parallelogram in shape_answer:
-            print("***Calculation Summary***")
-            print("shape: {}".format(parallelogram[0]))
-            print("base: {} {}".format(parallelogram[1], parallelogram[4]))
-            print("height: {} {}".format(parallelogram[2], parallelogram[4]))
-            print("side: {} {}".format(parallelogram[3], parallelogram[4]))
-            print("area: {} {}".format(parallelogram[5], parallelogram[4]))
-            print("perimeter: {} {}".format(parallelogram[6], parallelogram[4]))
-
-    if ask_user == "trapezium":
-
-        for trapezium in shape_answer:
-            print("***Calculation Summary***")
-            print("shape: {}".format(trapezium[0]))
-            print("bottom base: {} {}".format(trapezium[1], trapezium[6]))
-            print("top base: {} {}".format(trapezium[2], trapezium[6]))
-            print("height: {} {}".format(trapezium[3], trapezium[6]))
-            print("side 1: {} {}".format(trapezium[4], trapezium[6]))
-            print("side 2: {} {}".format(trapezium[5], trapezium[6]))
-            print("area: {} {}".format(trapezium[7], trapezium[6]))
-            print("perimeter: {} {}".format(trapezium[8], trapezium[6]))
+for item in shape_answer:
+    print(item)

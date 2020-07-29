@@ -73,10 +73,11 @@ def unit_checker():
         return unit_to_check
 
 
+shape_answer = []
 #  *** Main Routine starts here ***
 keep_going = ""
 while keep_going == "":
-    shape_answer = []
+
     available_shapes = ["square", "rectangle", "triangle", "parallelogram", "circle", "trapezium"]
     # Asks user to choose what shape they want to work out
     ask_user = string_checker("Choose a shape to work out:", available_shapes)
@@ -271,7 +272,7 @@ while keep_going == "":
 
     # Calculation Summary
 
-    if ask_user == "square":
+    if shape_answer == "square":
 
         for square in shape_answer:
             print("***Calculation Summary***")
@@ -280,7 +281,7 @@ while keep_going == "":
             print("area: {} {} ".format(square[3], square[2]))
             print("perimeter: {} {}".format(square[4], square[2]))
 
-    if ask_user == "rectangle":
+    if shape_answer == "rectangle":
 
         for rectangle in shape_answer:
             print("***Calculation Summary***")
@@ -290,7 +291,7 @@ while keep_going == "":
             print("area: {} {}".format(rectangle[4], rectangle[3]))
             print("perimeter {} {}".format(rectangle[5], rectangle[3]))
 
-    if ask_user == "triangle":
+    if shape_answer == "triangle":
 
         for triangle in shape_answer:
             print("***Calculation Summary***")
@@ -302,7 +303,7 @@ while keep_going == "":
             print("area: {} {}".format(triangle[6], triangle[4]))
             print("perimeter: {} {}".format(triangle[7], triangle[4]))
 
-    if ask_user == "circle":
+    if shape_answer == "circle":
 
         for circle in shape_answer:
             print("***Calculation Summary***")
@@ -311,7 +312,7 @@ while keep_going == "":
             print("area: {} {}".format(circle[3], circle[2]))
             print("circumference: {} {}".format(circle[4], circle[2]))
 
-    if ask_user == "parallelogram":
+    if shape_answer == "parallelogram":
 
         for parallelogram in shape_answer:
             print("***Calculation Summary***")
@@ -322,7 +323,7 @@ while keep_going == "":
             print("area: {} {}".format(parallelogram[5], parallelogram[4]))
             print("perimeter: {} {}".format(parallelogram[6], parallelogram[4]))
 
-    if ask_user == "trapezium":
+    if shape_answer == "trapezium":
 
         for trapezium in shape_answer:
             print("***Calculation Summary***")
@@ -334,3 +335,7 @@ while keep_going == "":
             print("side 2: {} {}".format(trapezium[5], trapezium[6]))
             print("area: {} {}".format(trapezium[7], trapezium[6]))
             print("perimeter: {} {}".format(trapezium[8], trapezium[6]))
+
+
+for item in shape_answer:
+    print(item)
