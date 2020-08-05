@@ -79,8 +79,10 @@ keep_going = ""
 while keep_going == "":
 
     available_shapes = ["square", "rectangle", "triangle", "parallelogram", "circle", "trapezium"]
+    calculator_1 = ["area", "perimeter"]
     # Asks user to choose what shape they want to work out
     ask_user = string_checker("Choose a shape to work out:", available_shapes)
+    ask_user_1 = string_checker("Area or perimeter ? ", calculator_1)
     print(ask_user)
     summary_1 = []
 
@@ -224,19 +226,20 @@ while keep_going == "":
 
     if ask_user == "parallelogram":
         print("*** Parallelogram Area / Perimeter Solver ***")
-
+        # asks user for necessary lengths
         parallelogram_base = num_check("What is the base: ")
         parallelogram_height = num_check("what is the height:")
         parallelogram_side = num_check("What is the side length:")
         unit = unit_checker()
-
+        # assigns to integer
         parallelogram_base = int(parallelogram_base)
         parallelogram_height = int(parallelogram_height)
         parallelogram_side = int(parallelogram_side)
-
+        # formula for area of parallelogram
         area = parallelogram_base * parallelogram_height
+        # formula for perimeter of parallelogram
         perimeter = 2 * (parallelogram_side + parallelogram_base)
-
+        # returns the area and perimeter of parallelogram
         print("The area of the parallelogram is {} {}".format(area, unit))
         print("The perimeter of the parallelogram is {} {}".format(perimeter, unit))
 
@@ -256,23 +259,24 @@ while keep_going == "":
 
     if ask_user == "trapezium":
         print("*** Trapezium Area / Perimeter ***")
-
+        # asks user for necessary lengths
         bottom_base = num_check("What is the bottom base:")
         top_base = num_check("What is the top base:")
         height = num_check("What is the height:")
         side_1 = num_check("What is side 1:")
         side_2 = num_check("What is side 2:")
         unit = unit_checker()
-
+        # assigns to integer
         bottom_base = int(bottom_base)
         top_base = int(top_base)
         height = int(height)
         side_1 = int(side_1)
         side_2 = int(side_2)
-
+        # formula for area of trapezium
         area = bottom_base + top_base / 2 * height
+        # formula for perimeter of trapezium
         perimeter = bottom_base + top_base + side_1 + side_2
-
+        # returns area and perimeter of trapezium
         print("The area is {} {}".format(area, unit))
         print("The perimeter is {} {}".format(perimeter, unit))
 
