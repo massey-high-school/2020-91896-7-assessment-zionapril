@@ -385,6 +385,21 @@ while keep_going == "":
             perimeter = bottom_base + top_base + side_1 + side_2
             print("The perimeter is {} {}".format(perimeter, unit))
             print("The area is N/A")
+
+            shape_name = "Shape: {}".format(ask_user)
+            display_dimensions_1 = "Area(Dimensions): n/a"
+            display_dimensions_2 = "Perimeter(Dimensions): {} {} + {} {} + {} {} + {} {}".format(bottom_base, unit,
+                                                                                                 top_base, unit,
+                                                                                                 side_1, unit, side_2, unit)
+
+            display_area = "Area: n/a"
+            display_perimeter = "Perimeter: {} {}".format(perimeter, unit)
+
+            summary_1.append(shape_name)
+            summary_1.append(display_dimensions_1)
+            summary_1.append(display_dimensions_2)
+            summary_1.append(display_area)
+            summary_1.append(display_perimeter)
         # if user wants to work out area and perimeter
         if ask_user_1 == "area and perimeter":
             bottom_base = num_check("What is the bottom base:")
