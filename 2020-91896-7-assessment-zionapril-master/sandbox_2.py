@@ -169,6 +169,21 @@ while keep_going == "":
             area = 0.5 * triangle_base * perpendicular_height
             print("The Area of the triangle is {} {} squared".format(area, unit))
             print("The perimeter of the triangle is N/A")
+
+            shape_name = "Shape: {}".format(ask_user)
+            display_dimensions_1 = "Area(Dimensions): 0.5 x {} {} x {} {}".format(triangle_base, unit,
+                                                                                  perpendicular_height, unit)
+            display_dimensions_2 = "Perimeter is N/A"
+
+            display_area = "Area: {} {} squared".format(area, unit)
+            display_perimeter = "Perimeter: n/a"
+
+            summary_1.append(shape_name)
+            summary_1.append(display_dimensions_1)
+            summary_1.append(display_dimensions_2)
+            summary_1.append(display_area)
+            summary_1.append(display_perimeter)
+
         if ask_user_1 == "perimeter":
             triangle_base = num_check("What is the base: ")
             triangle_height = num_check("What is slant height 1: ")
@@ -176,6 +191,21 @@ while keep_going == "":
             perimeter = triangle_base + triangle_height_2 + triangle_height
             print("The perimeter of the triangle is {} {}".format(perimeter, unit))
             print("The Area of the triangle is N/A")
+
+            shape_name = "Shape: {}".format(ask_user)
+            display_dimensions_1 = "Area is N/A"
+            display_dimensions_2 = "Perimeter(Dimensions): {} {} + {} {} + {} {}".format(triangle_base, unit,
+                                                                                         triangle_height_2, unit,
+                                                                                         triangle_height, unit)
+            display_area = "Area: n/a"
+            display_perimeter = "Perimeter: {} {}".format(perimeter, unit)
+
+            summary_1.append(shape_name)
+            summary_1.append(display_dimensions_1)
+            summary_1.append(display_dimensions_2)
+            summary_1.append(display_area)
+            summary_1.append(display_perimeter)
+
         if ask_user_1 == "area and perimeter":
             triangle_base = num_check("What is the base: ")
             triangle_height = num_check("What is slant height 1: ")
@@ -253,6 +283,19 @@ while keep_going == "":
             print("The area of the parallelogram is {} {} squared".format(area, unit))
             print("The perimeter of the parallelogram is N/A")
 
+            shape_name = "Shape: {}".format(ask_user)
+            display_dimensions_1 = "Area(Dimensions): {} {} x {} {}".format(parallelogram_base, unit,
+                                                                            parallelogram_height, unit)
+            display_dimensions_2 = "Perimeter(Dimensions): n/a"
+            display_area = "Area: {} {} squared".format(area, unit)
+            display_perimeter = "Perimeter: n/a"
+
+            summary_1.append(shape_name)
+            summary_1.append(display_dimensions_1)
+            summary_1.append(display_dimensions_2)
+            summary_1.append(display_area)
+            summary_1.append(display_perimeter)
+
         if ask_user_1 == "perimeter":
             parallelogram_base = num_check("What is the base: ")
             parallelogram_side = num_check("What is the side length:")
@@ -260,6 +303,19 @@ while keep_going == "":
             perimeter = 2 * (parallelogram_side + parallelogram_base)
             print("The perimeter of the parallelogram is {} {}".format(perimeter, unit))
             print("The area of the parallelogram is N/A")
+
+            shape_name = "Shape: {}".format(ask_user)
+            display_dimensions_1 = "Area(Dimensions): N/A"
+            display_dimensions_2 = "Perimeter(Dimensions): 2 x ({} {} + {} {})".format(parallelogram_side, unit,
+                                                                                       parallelogram_base, unit)
+            display_area = "Area: N/A"
+            display_perimeter = "Perimeter: {} {}".format(perimeter, unit)
+
+            summary_1.append(shape_name)
+            summary_1.append(display_dimensions_1)
+            summary_1.append(display_dimensions_2)
+            summary_1.append(display_area)
+            summary_1.append(display_perimeter)
 
         if ask_user_1 == "area and perimeter":
             parallelogram_base = num_check("What is the base: ")
@@ -304,6 +360,21 @@ while keep_going == "":
             area = bottom_base + top_base / 2 * height
             print("The area is {} {} squared".format(area, unit))
             print("The perimeter is N/A")
+
+            shape_name = "Shape: {}".format(ask_user)
+            display_dimensions_1 = "Area(Dimensions): {} {} + {} {} / 2 x {} {}".format(bottom_base, unit, top_base, unit,
+                                                                                        height, unit)
+            display_dimensions_2 = "Perimeter(Dimensions): N/A"
+
+            display_area = "Area: {} {} squared".format(area, unit)
+            display_perimeter = "Perimeter: n/a "
+
+            summary_1.append(shape_name)
+            summary_1.append(display_dimensions_1)
+            summary_1.append(display_dimensions_2)
+            summary_1.append(display_area)
+            summary_1.append(display_perimeter)
+
         # if user only wants to work out perimeter
         if ask_user_1 == "perimeter":
             bottom_base = num_check("What is the bottom base:")
